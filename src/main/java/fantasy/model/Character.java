@@ -1,18 +1,35 @@
 package fantasy.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Character {
+
     @Id
     @GeneratedValue
     private Long id;
-
     private User user;
     private String description;
-    private String ability;
+    private CharacterAbilities characterAbilities;
+
+    public CharacterAbilities getCharacterAbilities() {
+        return characterAbilities;
+    }
+
+    public void setCharacterAbilities(CharacterAbilities characterAbilities) {
+        this.characterAbilities = characterAbilities;
+    }
+
+    public CharacterRaseAndClass getCharacterRaseAndClass() {
+        return characterRaseAndClass;
+    }
+
+    public void setCharacterRaseAndClass(CharacterRaseAndClass characterRaseAndClass) {
+        this.characterRaseAndClass = characterRaseAndClass;
+    }
+
+    @Enumerated(EnumType.STRING)
+    private CharacterRaseAndClass characterRaseAndClass;
 
     public Long getId() {
         return id;
@@ -34,11 +51,4 @@ public class Character {
         this.description = description;
     }
 
-    public String getAbility() {
-        return ability;
-    }
-
-    public void setAbility(String ability) {
-        this.ability = ability;
-    }
 }
