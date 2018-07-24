@@ -10,5 +10,6 @@ public interface UserService {
 
     void create(String email, String password);
         Set<User> findAll();
+
 }
 

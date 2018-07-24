@@ -1,7 +1,7 @@
 package fantasy.model;
 
 public enum SpecialAbilities {
-    dark_vision,
+    DARK_VISION,
     mind_control,
     luck,
 }

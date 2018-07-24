@@ -15,7 +15,6 @@ public class Character {
 
     @Enumerated(EnumType.STRING)
     private CharacterRaseAndClass characterRaseAndClass;
-
     public CharacterRaseAndClass getCharacterRaseAndClass() {
         return characterRaseAndClass;
     }
