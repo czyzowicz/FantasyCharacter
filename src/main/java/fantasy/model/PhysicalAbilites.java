@@ -10,8 +10,8 @@ public enum PhysicalAbilites {
     SWORD_AND_SHIELD_FIGHT ("SWORD AND SHIELD FIGHT"),
     AXE_AND_HAMMER_FIGHT ("AXE AND HAMMER FIGHT"),
     DISTANCE_FIGHT ("DISTANCE  FIGHT"),
-    TWO_WEAPONS_FIGHT ("TWO WEAPONS FIGHT");
-    
+    THIEF_SKILLS ("THIEF SKILLS");
+
     private String physicalAbilites;
 
     PhysicalAbilites(String physicalAbilites) {
