@@ -12,7 +12,6 @@ public class CharacterAbilities {
     private SpecialAbilities specialAbilities;
 
     @Enumerated(EnumType.STRING)
-
     private PsychicAbilities psychicAbilities;
 
     @Enumerated(EnumType.STRING)
