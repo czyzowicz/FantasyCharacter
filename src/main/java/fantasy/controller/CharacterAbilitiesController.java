@@ -4,11 +4,9 @@ import fantasy.model.CharacterAbilities;
 import fantasy.model.PhysicalAbilites;
 import fantasy.model.PsychicAbilities;
 import fantasy.model.SpecialAbilities;
-import fantasy.servis.CharacterAbilitiesService;
-import groovy.util.logging.Log4j;
+import fantasy.service.CharacterAbilitiesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import sun.text.normalizer.CharTrie;
 
 import java.util.Set;
 

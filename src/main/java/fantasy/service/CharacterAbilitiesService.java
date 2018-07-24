@@ -1,19 +1,21 @@
-package fantasy.repository;
+package fantasy.service;
+
 
 import fantasy.model.CharacterAbilities;
 import fantasy.model.PhysicalAbilites;
 import fantasy.model.PsychicAbilities;
 import fantasy.model.SpecialAbilities;
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-@Repository
-public interface CharacterAbilitiesRepository extends CrudRepository<CharacterAbilities, Long> {
+@Service
+public interface CharacterAbilitiesService {
 
+    void create(PhysicalAbilites physicalAbilites, PsychicAbilities psychicAbilities, SpecialAbilities specialAbilities);
     Set<CharacterAbilities> findAllByPhysicalAbilities(PhysicalAbilites physicalAbilites);
     Set<CharacterAbilities> findAllByPsychicalAbilities(PsychicAbilities psychicAbilities);
     Set<CharacterAbilities> findAllBySpecialAbilities(SpecialAbilities specialAbilities);
-}
 
+
+}
