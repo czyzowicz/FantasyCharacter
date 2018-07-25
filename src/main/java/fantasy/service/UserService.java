@@ -1,4 +1,4 @@
-package fantasy.servis;
+package fantasy.service;
 
 import fantasy.model.User;
 import org.springframework.stereotype.Service;
@@ -9,7 +9,7 @@ import java.util.Set;
 public interface UserService {
 
     void create(String email, String password);
-        Set<User> findAll();
+        Set<User> findAll(String email);
 
 }
 

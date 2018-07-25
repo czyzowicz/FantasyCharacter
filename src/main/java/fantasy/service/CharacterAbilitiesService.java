@@ -1,4 +1,4 @@
-package fantasy.servis;
+package fantasy.service;
 
 
 import fantasy.model.CharacterAbilities;

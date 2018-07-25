@@ -10,6 +10,5 @@ import java.util.Set;
 @Repository
 public interface CharacterRepository extends CrudRepository<Character, Long> {
 
-    void create(String user, String description );
     Set<Character> findCharacterBy(Long characterId);
 }
