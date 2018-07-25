@@ -8,23 +8,27 @@ public class Character {
     @Id
     @GeneratedValue
     private Long id;
+
+    @OneToOne
     private User user;
     private String description;
     private String name;
+
+    @OneToOne
     private CharacterAbilities characterAbilities;
 
     @Enumerated(EnumType.STRING)
-    private CharacterRaseAndClass characterRaseAndClass;
-    public CharacterRaseAndClass getCharacterRaseAndClass() {
-        return characterRaseAndClass;
+    private CharacterRaseUndClass characterRaseUndClass;
+    public CharacterRaseUndClass getCharacterRaseUndClass() {
+        return characterRaseUndClass;
     }
 
     public CharacterAbilities getCharacterAbilities() {
         return characterAbilities;
     }
 
-    public void setCharacterRaseAndClass(CharacterRaseAndClass characterRaseAndClass) {
-        this.characterRaseAndClass = characterRaseAndClass;
+    public void setCharacterRaseUndClass(CharacterRaseUndClass characterRaseUndClass) {
+        this.characterRaseUndClass = characterRaseUndClass;
     }
 
     public void setCharacterAbilities(CharacterAbilities characterAbilities) {

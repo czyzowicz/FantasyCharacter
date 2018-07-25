@@ -2,7 +2,7 @@ package fantasy.controller;
 
 import fantasy.model.Character;
 import fantasy.model.CharacterAbilities;
-import fantasy.model.CharacterRaseAndClass;
+import fantasy.model.CharacterRaseUndClass;
 import fantasy.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -27,8 +27,8 @@ public class CharacterController {
                        @RequestParam String name,
                        @RequestParam String description,
                        @RequestParam CharacterAbilities characterAbilities,
-                       @RequestParam CharacterRaseAndClass characterRaseAndClass){
-        characterService.create(user, description, name, characterAbilities, characterRaseAndClass);
+                       @RequestParam CharacterRaseUndClass characterRaseUndClass){
+        characterService.create(user, description, name, characterAbilities, characterRaseUndClass);
 
     }
 
@@ -43,8 +43,8 @@ public class CharacterController {
     }
 
     @GetMapping
-    public Set<Character> findAllByRaceAndClass(@PathVariable CharacterRaseAndClass characterRaseAndClass){
-        return characterService.findAllByCharacterRaseAndClass(characterRaseAndClass);
+    public Set<Character> findAllByRaceAndClass(@PathVariable CharacterRaseUndClass characterRaseUndClass){
+        return characterService.findAllByCharacterRaseAndClass(characterRaseUndClass);
     }
 
 }
