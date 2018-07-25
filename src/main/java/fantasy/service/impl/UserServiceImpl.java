@@ -22,6 +22,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Set<User> findAll(String email) {
-        return userRepository.findOneByEmail(email);
+        return userRepository.findOneByMail(email);
     }
 }
