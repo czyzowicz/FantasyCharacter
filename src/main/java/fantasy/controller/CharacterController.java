@@ -32,17 +32,17 @@ public class CharacterController {
 
     }
 
-    @GetMapping
+    @GetMapping("/all")
     public Set<Character> findAll(){
         return characterService.findAll();
     }
 
-    @GetMapping
+    @GetMapping("/name")
     public Set<Character> findAllByName(@PathVariable String name){
         return characterService.findAllByName(name);
     }
 
-    @GetMapping
+    @GetMapping("/raceAndClass")
     public Set<Character> findAllByRaceAndClass(@PathVariable CharacterRaseUndClass characterRaseUndClass){
         return characterService.findAllByCharacterRaseAndClass(characterRaseUndClass);
     }

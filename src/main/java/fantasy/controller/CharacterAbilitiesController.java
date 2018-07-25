@@ -1,7 +1,7 @@
 package fantasy.controller;
 
 import fantasy.model.CharacterAbilities;
-import fantasy.model.PhysicalAbilites;
+import fantasy.model.PhysicalAbilities;
 import fantasy.model.PsychicAbilities;
 import fantasy.model.SpecialAbilities;
 import fantasy.service.CharacterAbilitiesService;
@@ -17,7 +17,6 @@ public class CharacterAbilitiesController {
     private CharacterAbilitiesService characterAbilitiesService;
 
     @Autowired
-
     public CharacterAbilitiesController(CharacterAbilitiesService characterAbilitiesService) {
         this.characterAbilitiesService = characterAbilitiesService;
     }
@@ -26,22 +25,22 @@ public class CharacterAbilitiesController {
 
     @PostMapping
     public void create(@RequestParam SpecialAbilities specialAbilities,
-                       @RequestParam PhysicalAbilites physicalAbilites,
+                       @RequestParam PhysicalAbilities physicalAbilities,
                        @RequestParam PsychicAbilities psychicAbilities){
-      characterAbilitiesService.create(physicalAbilites, psychicAbilities, specialAbilities);
+      characterAbilitiesService.create(physicalAbilities, psychicAbilities, specialAbilities);
     }
 
-    @GetMapping
+    @GetMapping("/special")
     Set<CharacterAbilities> findAllBySpecialAbilities(@PathVariable SpecialAbilities specialAbilities){
         return characterAbilitiesService.findAllBySpecialAbilities(specialAbilities);
     }
 
-    @GetMapping
-    Set<CharacterAbilities> findAllByPhysicalAbilities(@PathVariable PhysicalAbilites physicalAbilites){
-        return characterAbilitiesService.findAllByPhysicalAbilities(physicalAbilites);
+    @GetMapping("/physical")
+    Set<CharacterAbilities> findAllByPhysicalAbilities(@PathVariable PhysicalAbilities physicalAbilities){
+        return characterAbilitiesService.findAllByPhysicalAbilities(physicalAbilities);
     }
 
-    @GetMapping
+    @GetMapping("/psychic")
     Set<CharacterAbilities> findAllByPsychicAbilities(@PathVariable PsychicAbilities psychicAbilities){
         return characterAbilitiesService.findAllByPsychicalAbilities(psychicAbilities);
     }

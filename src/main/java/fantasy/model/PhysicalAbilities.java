@@ -1,6 +1,6 @@
 package fantasy.model;
 
-public enum PhysicalAbilites {
+public enum PhysicalAbilities {
     STRENGTH ("STRENGTH"),
     SPEED ("SPEED"),
     AGILITY ("AGILITY"),
@@ -12,17 +12,17 @@ public enum PhysicalAbilites {
     DISTANCE_FIGHT ("DISTANCE  FIGHT"),
     THIEF_SKILLS ("THIEF SKILLS");
 
-    private String physicalAbilites;
+    private String physicalAbilities;
 
-    PhysicalAbilites(String physicalAbilites) {
-        this.physicalAbilites = physicalAbilites;
+    PhysicalAbilities(String physicalAbilities) {
+        this.physicalAbilities = physicalAbilities;
     }
 
-    public String getPhysicalAbilites() {
-        return physicalAbilites;
+    public String getPhysicalAbilities() {
+        return physicalAbilities;
     }
 
-    public void setPhysicalAbilites(String physicalAbilites) {
-        this.physicalAbilites = physicalAbilites;
+    public void setPhysicalAbilities(String physicalAbilities) {
+        this.physicalAbilities = physicalAbilities;
     }
 }

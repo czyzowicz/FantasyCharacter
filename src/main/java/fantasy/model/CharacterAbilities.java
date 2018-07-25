@@ -15,7 +15,7 @@ public class CharacterAbilities {
     private PsychicAbilities psychicAbilities;
 
     @Enumerated(EnumType.STRING)
-    private PhysicalAbilites physicalAbilites;
+    private PhysicalAbilities physicalAbilities;
 
     public Long getId() {
         return id;
@@ -37,12 +37,12 @@ public class CharacterAbilities {
         this.psychicAbilities = psychicAbilities;
     }
 
-    public PhysicalAbilites getPhysicalAbilites() {
-        return physicalAbilites;
+    public PhysicalAbilities getPhysicalAbilities() {
+        return physicalAbilities;
     }
 
-    public void setPhysicalAbilites(PhysicalAbilites physicalAbilites) {
-        this.physicalAbilites = physicalAbilites;
+    public void setPhysicalAbilities(PhysicalAbilities physicalAbilities) {
+        this.physicalAbilities = physicalAbilities;
     }
 
 

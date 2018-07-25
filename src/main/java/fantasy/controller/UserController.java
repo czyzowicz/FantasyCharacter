@@ -14,7 +14,7 @@ import java.util.Set;
 public class UserController {
 
     private UserService userService;
-    @GetMapping
+    @GetMapping("/all")
     Set<User> findAll(String email){
         return  userService.findAll(email);
     }

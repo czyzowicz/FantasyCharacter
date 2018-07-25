@@ -1,7 +1,7 @@
 package fantasy.service.impl;
 
 import fantasy.model.CharacterAbilities;
-import fantasy.model.PhysicalAbilites;
+import fantasy.model.PhysicalAbilities;
 import fantasy.model.PsychicAbilities;
 import fantasy.model.SpecialAbilities;
 import fantasy.repository.CharacterAbilitiesRepository;
@@ -16,16 +16,16 @@ public class CharacterAbilitiesServiceImpl implements CharacterAbilitiesService 
     private CharacterAbilitiesRepository characterAbilitiesRepository;
 
     @Override
-    public void create(PhysicalAbilites physicalAbilites, PsychicAbilities psychicAbilities, SpecialAbilities specialAbilities) {
+    public void create(PhysicalAbilities physicalAbilities, PsychicAbilities psychicAbilities, SpecialAbilities specialAbilities) {
         CharacterAbilities characterAbilities = new CharacterAbilities();
-        characterAbilities.setPhysicalAbilites(physicalAbilites);
+        characterAbilities.setPhysicalAbilities(physicalAbilities);
         characterAbilities.setPsychicAbilities(psychicAbilities);
         characterAbilities.setSpecialAbilities(specialAbilities);
         characterAbilitiesRepository.save(characterAbilities);
     }
 
     @Override
-    public Set<CharacterAbilities> findAllByPhysicalAbilities(PhysicalAbilites physicalAbilites) {
+    public Set<CharacterAbilities> findAllByPhysicalAbilities(PhysicalAbilities physicalAbilities) {
         return null;
     }
 
