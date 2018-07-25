@@ -1,6 +1,6 @@
 package fantasy.model;
 
-public enum CharacterRaseAndClass {
+public enum CharacterRaseUndClass {
     DWARF_WARRIOR("DWARF", "WARRIOR"),
     DWARF_CLERIC ("DWARF", "CLERIC"),
     ELF_MAGE ("ELF" , "MAGE"),
@@ -15,7 +15,7 @@ public enum CharacterRaseAndClass {
     private String rase;
     private String clazz;
 
-    CharacterRaseAndClass(String rase, String clazz) {
+    CharacterRaseUndClass(String rase, String clazz) {
         this.rase = rase;
         this.clazz = clazz;
     }

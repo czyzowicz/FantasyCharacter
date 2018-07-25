@@ -2,7 +2,7 @@ package fantasy.service.impl;
 
 import fantasy.model.Character;
 import fantasy.model.CharacterAbilities;
-import fantasy.model.CharacterRaseAndClass;
+import fantasy.model.CharacterRaseUndClass;
 import fantasy.model.User;
 import fantasy.repository.CharacterRepository;
 import fantasy.service.CharacterService;
@@ -20,13 +20,13 @@ public class CharacterServiceImpl implements CharacterService {
     }
 
     @Override
-    public void create(User user, String description, String name, CharacterAbilities characterAbilities, CharacterRaseAndClass characterRaseAndClass) {
+    public void create(User user, String description, String name, CharacterAbilities characterAbilities, CharacterRaseUndClass characterRaseUndClass) {
         Character character = new Character();
         character.setUser(user);
         character.setName(name);
         character.setDescription(description);
         character.setCharacterAbilities(characterAbilities);
-        character.setCharacterRaseAndClass(characterRaseAndClass);
+        character.setCharacterRaseUndClass(characterRaseUndClass);
         characterRepository.save(character);
     }
 
@@ -41,7 +41,7 @@ public class CharacterServiceImpl implements CharacterService {
     }
 
     @Override
-    public Set<Character> findAllByCharacterRaseAndClass(CharacterRaseAndClass characterRaseAndClass) {
-        return characterRepository.findAllByCharacterRaseAndClass(characterRaseAndClass);
+    public Set<Character> findAllByCharacterRaseAndClass(CharacterRaseUndClass characterRaseUndClass) {
+        return characterRepository.findAllByCharacterRaseUndClass(characterRaseUndClass);
     }
 }
