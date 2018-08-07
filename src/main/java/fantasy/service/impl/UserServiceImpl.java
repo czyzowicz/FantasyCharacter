@@ -3,9 +3,11 @@ package fantasy.service.impl;
 import fantasy.model.User;
 import fantasy.repository.UserRepository;
 import fantasy.service.UserService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class UserServiceImpl implements UserService {
 
     private UserRepository userRepository;
@@ -16,12 +18,10 @@ public class UserServiceImpl implements UserService {
         user.setMail(email);
         user.setPassword(password);
         userRepository.save(user);
-
-
     }
 
     @Override
-    public Set<User> findAll(String email) {
-        return userRepository.findOneByMail(email);
+    public Set<User> findAll() {
+        return userRepository.findAllBy();
     }
 }

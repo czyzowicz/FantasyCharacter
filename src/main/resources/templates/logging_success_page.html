@@ -7,6 +7,7 @@
 <body>
 <p th:text="'Hello, ' + ${mail} + '!'"></p>
 <form method="post" action="/api/character_abilities">
+
     <select name="PhysicalAbilities" size="5" multiple="multiple">
         <option value="STRENGTH">STRENGTH</option>
         <option value="SPEED">SPEED</option>
@@ -34,6 +35,21 @@
             <option value="SPEAKING WITH ANIMALS">SPEAKING WITH ANIMALS</option>
             <option value="READ AND WRITING">READ AND WRITING</option>
         </select>
+    <br/>
+    <br/>
+    <br/>
+    <select name="SpecialAbilities" size="5" multiple="multiple">
+        <option value="DARK VISION">DARK VISION</option>
+        <option value="LUCK">LUCK</option>
+        <option value="QUICK LEARN">QUICK LEARN</option>
+        <option value="PSIONIC">PSIONIC</option>
+        <option value="CLERIC SPELLS">CLERIC SPELLS</option>
+        <option value="MAGE SPELLS">MAGE SPELLS</option>
+        <option value="NECROMANT SPELLS">NECROMANT SPELLS</option>
+        <option value="RESISTANCE">RESISTANCE</option>
+        <option value="MUTATION">MUTATION</option>
+        <option value="DOGDE">DOGDE</option>
+    </select>
         <br/>
         <input type="submit" value="Done"/>
     </form>

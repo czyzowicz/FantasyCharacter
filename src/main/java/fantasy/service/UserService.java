@@ -9,7 +9,8 @@ import java.util.Set;
 public interface UserService {
 
     void create(String email, String password);
-        Set<User> findAll(String email);
+
+    Set<User> findAll();
 
 }
 
