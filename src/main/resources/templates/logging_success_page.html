@@ -7,7 +7,7 @@
 <body>
 <p th:text="'Hello, ' + ${mail} + '!'"></p>
 <form method="post" action="/api/character_abilities">
-<select name="PhysicalAbilities", size="5" multiple>
+<select name="PhysicalAbilities", size="5" multiple="multiple">
     <option th:value="STRENGTH">STRENGTH</option>
     <option th:value="SPEED">SPEED</option>
     <option th:value="AGILITY">AGILITY</option>
@@ -20,12 +20,8 @@
     <option th:value="THIEF SKILLS">THIEF SKILLS</option>
 </select>
     <br/>
-    <input type="submit" value="Done">
-</form>
-<br/>
-<br/>
-<form>
-    <select name="PsychicAbilities", size="5" multiple>
+    <br/>
+    <select name="PsychicAbilities", size="5" multiple="multiple">
         <option th:value="CHARISMA">CHARISMA</option>
         <option th:value="WISDOM">WISDOM</option>
         <option th:value="INTELIGENCE">INTELIGENCE</option>
@@ -37,6 +33,21 @@
         <option th:value="SPEAKING WITH ANIMALS">SPEAKING WITH ANIMALS</option>
         <option th:value="READ AND WRITING">READ AND WRITING</option>
     </select>
+    <br/>
+    <br/>
+    <select name="SpecialAbilities", size="5" multiple="multiple">
+        <option th:value="DARK VISION">DARK VISION</option>
+        <option th:value="LUCK">LUCK</option>
+        <option th:value="QUICK LEARN">QUICK LEARN</option>
+        <option th:value="PSIONIC">PSIONIC</option>
+        <option th:value="CLERIC SPELLS">CLERIC SPELLS</option>
+        <option th:value="MAGE SPELLS">MAGE SPELLS</option>
+        <option th:value="NECROMANT SPELLS">NECROMANT SPELLS</option>
+        <option th:value="RESISTANCE">RESISTANCE</option>
+        <option th:value="MUTATION">MUTATION</option>
+        <option th:value="DOGDE">DOGDE</option>
+    </select>
+    <br/>
     <br/>
     <input type="submit" value="Done">
 </form>
