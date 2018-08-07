@@ -19,10 +19,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .antMatchers("/api/users", "/login.html").permitAll()
                 .anyRequest().authenticated();
-
         //  http.httpBasic();
         http.formLogin()
-                .loginPage("/login.html")
+                .loginPage("/login")
                 .defaultSuccessUrl("/logging_success_page.html")
                 .permitAll();
         http.logout()
