@@ -7,38 +7,35 @@
 <body>
 <p th:text="'Hello, ' + ${mail} + '!'"></p>
 <form method="post" action="/api/character_abilities">
-<select name="PhysicalAbilities", size="5" multiple>
-    <option th:value="STRENGTH">STRENGTH</option>
-    <option th:value="SPEED">SPEED</option>
-    <option th:value="AGILITY">AGILITY</option>
-    <option th:value="ENDURANCE">ENDURANCE</option>
-    <option th:value="VITALITY">VITALITY</option>
-    <option th:value="SWORD AND DAGGER FIGHT">SWORD AND DAGGER FIGHT</option>
-    <option th:value="SWORD AND SHIELD FIGHT">SWORD AND SHIELD FIGHT</option>
-    <option th:value="AXE AND HAMMER FIGHT">AXE AND HAMMER FIGHT</option>
-    <option th:value="DISTANCE  FIGHT">DISTANCE  FIGHT</option>
-    <option th:value="THIEF SKILLS">THIEF SKILLS</option>
-</select>
-    <br/>
-    <input type="submit" value="Done">
-</form>
-<br/>
-<br/>
-<form>
-    <select name="PsychicAbilities", size="5" multiple>
-        <option th:value="CHARISMA">CHARISMA</option>
-        <option th:value="WISDOM">WISDOM</option>
-        <option th:value="INTELIGENCE">INTELIGENCE</option>
-        <option th:value="STRENGTH_WILL">STRENGTH_WILL</option>
-        <option th:value="OBSERVATION">OBSERVATION</option>
-        <option th:value="LISTENING">LISTENING</option>
-        <option th:value="DIPLOMACY">DIPLOMACY</option>
-        <option th:value="BLEF">BLEF</option>
-        <option th:value="SPEAKING WITH ANIMALS">SPEAKING WITH ANIMALS</option>
-        <option th:value="READ AND WRITING">READ AND WRITING</option>
+    <select name="PhysicalAbilities" size="5" multiple="multiple">
+        <option value="STRENGTH">STRENGTH</option>
+        <option value="SPEED">SPEED</option>
+        <option value="AGILITY">AGILITY</option>
+        <option value="ENDURANCE">ENDURANCE</option>
+        <option value="VITALITY">VITALITY</option>
+        <option value="SWORD AND DAGGER FIGHT">SWORD AND DAGGER FIGHT</option>
+        <option value="SWORD AND SHIELD FIGHT">SWORD AND SHIELD FIGHT</option>
+        <option value="AXE AND HAMMER FIGHT">AXE AND HAMMER FIGHT</option>
+        <option value="DISTANCE  FIGHT">DISTANCE FIGHT</option>
+        <option value="THIEF SKILLS">THIEF SKILLS</option>
     </select>
     <br/>
-    <input type="submit" value="Done">
-</form>
+    <br/>
+    <br/>
+        <select name="PsychicAbilities" size="5" multiple="multiple">
+            <option value="CHARISMA">CHARISMA</option>
+            <option value="WISDOM">WISDOM</option>
+            <option value="INTELIGENCE">INTELIGENCE</option>
+            <option value="STRENGTH_WILL">STRENGTH_WILL</option>
+            <option value="OBSERVATION">OBSERVATION</option>
+            <option value="LISTENING">LISTENING</option>
+            <option value="DIPLOMACY">DIPLOMACY</option>
+            <option value="BLEF">BLEF</option>
+            <option value="SPEAKING WITH ANIMALS">SPEAKING WITH ANIMALS</option>
+            <option value="READ AND WRITING">READ AND WRITING</option>
+        </select>
+        <br/>
+        <input type="submit" value="Done"/>
+    </form>
 </body>
 </html>
